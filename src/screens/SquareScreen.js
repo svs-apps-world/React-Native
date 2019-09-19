@@ -10,12 +10,18 @@ const reducer = (state, action) => {
 
 	switch(action.colorToChange) {
 		case 'red':
+			if(state.red + action.amount < 0 || state.red + action.amount > 255)
+				return state
 			return { ...state, red: state.red + action.amount}
 			break
 		case 'green':
+			if(state.green + action.amount < 0 || state.green + action.amount > 255)
+				return state
 			return { ...state, green: state.green + action.amount}
 			break
 		case 'blue':
+			if(state.blue + action.amount < 0 || state.blue + action.amount > 255)
+				return state
 			return { ...state, blue: state.blue + action.amount}
 			break
 		default:
