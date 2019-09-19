@@ -5,14 +5,14 @@ import { useState } from 'react';
 
 const CounterScreen = () => {
 	
-	const [counter, setCounter] = useState(0);
+	const [counter, setCounter] = useState(20);
 	
 	return (
 	<View>
 		<Button
 			title="Increase"
 			onPress={() => {
-				setCounter(counter + 10)
+				setCounter(counter + 40)
 			}}
 		/>
 		<Button
